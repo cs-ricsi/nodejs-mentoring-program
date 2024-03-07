@@ -1,5 +1,5 @@
-import childProcess from 'child_process';
-import EventEmitter from 'events';
+import childProcess from 'node:child_process';
+import EventEmitter from 'node:events';
 
 export const activityMonitor = (command: string): EventEmitter => {
   const emitter = new EventEmitter();
