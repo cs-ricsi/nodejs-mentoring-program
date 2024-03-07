@@ -1,11 +1,11 @@
-import { System, SystemCommand } from './types/SystemTypes.ts'
+import { SystemCommand } from './types/SystemTypes.ts'
 import { activityMonitor } from './events/activityMonitor.ts'
 import { logActivity } from './events/logActivity.ts'
 import os from 'os';
 import fs from 'fs';
 
 const systemType = os.type();
-const liveActivity = activityMonitor(SystemCommand[systemType as System])
+const liveActivity = activityMonitor(systemType === 'Windows_NT' ? SystemCommand.Windows_NT : SystemCommand.Linux)
 const logger = logActivity();
 let logData = '';
 
