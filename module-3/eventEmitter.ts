@@ -5,7 +5,15 @@ export default class EventEmitter {
         this.listeners[eventName] = fn;
     }
 
+    on(eventName: string, fn: Function): void {
+        this.listeners[eventName] = fn;
+    }
+
     removeListener(eventName: string): void {
+        delete this.listeners[eventName];
+    }
+
+    off(eventName: string): void {
         delete this.listeners[eventName];
     }
 

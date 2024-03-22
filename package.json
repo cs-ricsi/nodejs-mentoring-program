@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.ts"
+    "start": "nodemon index.ts",
+    "start-module-3": "nodemon module-3/index.ts"
   },
   "author": "richard csizmadia",
   "license": "ISC",
